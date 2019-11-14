@@ -6,10 +6,7 @@ RUN apt-get update && apt-get install -y xmlstarlet curl git devscripts make gol
 
 
 # install github hub
-RUN git clone https://github.com/github/hub
 
-RUN cd hub
-RUN make install
 
 
 # create and use an elementary user instead of root

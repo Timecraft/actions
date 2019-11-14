@@ -1,12 +1,14 @@
 #!/bin/bash
 ## set -e
 
-#----------------------------------#
-# Install linuxbrew and GitHub hub #
-#----------------------------------#
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-brew install hub
-echo Hello world
+#--------------------#
+# Install GitHub hub #
+#--------------------#
+git clone https://github.com/github/hub
+cd hub
+make install
+
+cd
 
 # if a custom token is provided, use it instead of the default github token.
 if [ -n "$GIT_USER_TOKEN" ]; then
