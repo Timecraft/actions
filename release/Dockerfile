@@ -2,18 +2,7 @@ FROM debian:stable-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y xmlstarlet curl git devscripts make software-properties-common && apt-get update
-
-
-# install github hub
-RUN git clone https://github.com/github/hub
-
-RUN cd hub
-RUN add-apt-repository ppa:gophers/archive
-RUN apt-get update
-RUN apt-get install golang-go
-RUN make install
-
+RUN apt-get update && apt-get install -y xmlstarlet curl git devscripts make
 
 # create and use an elementary user instead of root
 RUN groupadd -r elementary && useradd --no-log-init -r -g elementary elementary
