@@ -4,7 +4,11 @@
 #--------------------#
 # Install GitHub hub #
 #--------------------#
-git clone https://github.com/github/hub
+git clone \
+  --config transfer.fsckobjects=false \
+  --config receive.fsckobjects=false \
+  --config fetch.fsckobjects=false \
+  https://github.com/github/hub.git
 cd hub
 make install
 
