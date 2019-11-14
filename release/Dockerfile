@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y xmlstarlet curl git devscripts
 
-RUN apt-get install snapd
+RUN apt-get install -y snapd
 RUN snap install hub --classic
 
 # create and use an elementary user instead of root
