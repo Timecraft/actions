@@ -6,7 +6,7 @@ set -e
 #----------------------------------#
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 brew install hub
-
+echo Hello world
 
 # if a custom token is provided, use it instead of the default github token.
 if [ -n "$GIT_USER_TOKEN" ]; then
