@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+## set -e
 
 #----------------------------------#
 # Install linuxbrew and GitHub hub #
