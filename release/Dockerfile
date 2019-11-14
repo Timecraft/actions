@@ -2,7 +2,7 @@ FROM debian:stable-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y xmlstarlet curl git devscripts make
+RUN apt-get update && apt-get install -y xmlstarlet curl git devscripts make software-properties-common && apt-get update
 
 
 # install github hub
